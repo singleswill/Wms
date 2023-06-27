@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.wms.dao.WmsResposityDao">
+
+    <!--查询单个-->
+    <select id="selectStockPriceById" resultType="com.wms.wms.vo.GoodsVo">
+        SELECT a.goods_id,a.goods_price,b.stock FROM wms_goods a,wms_resp_goods b where a.goods_id = b.goods_id and a.goods_id = #{id};
+    </select>
+</mapper>
+
